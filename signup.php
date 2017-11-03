@@ -1,5 +1,15 @@
+<?php
+
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <style>
 /* Full-width input fields */
 input[type=text], input[type=password] ,input[type=tel] {
@@ -51,6 +61,7 @@ button {
 
 <form action="register.php" method="POST" style="border:1px solid #ccc">
   <div class="container">
+  
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="user" required>
 	
@@ -63,13 +74,19 @@ button {
 	<label><b>Contact</b></label>
     <input type="tel" placeholder="Enter Contact" name="contact" required>
 
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    By creating an account you agree to our   
+	<a href="#" data-toggle="popover" title="Terms and Conditions" data-content="There are certain terms and condition related to this.Kindly read those from the information brochure.">Terms & Privacy</a>.
 
     <div class="clearfix">
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
-  </div>
-</form>
+  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+</div>
 
+</form>
 </body>
 </html>
